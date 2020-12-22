@@ -1,4 +1,4 @@
-#Word of the Day
+# Word of the Day
 
 This project is pretty self explanatory c:
 
