@@ -1,31 +1,43 @@
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic);
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+    --white: #fcfcfcff;
+    --brink-pink: #f7567cff;
+    --cornsilk: #fffae3ff;
+    --middle-blue-green: #99e1d9ff;
+    --independence: #5d576bff;
 
-body{
-    background-color: #ecf0f1;
+    --icon-size: 65px;
 }
 html > *{
     font-family: "IBM Plex Sans";
 }
+body{
+    background-color: var(--white);
+}
 .navbar{
-    background-color: #2c3e50;
+    background-color: var(--independence);
 }
 .placeholder{
     font-size: xx-large;
 }
 .abt-btn{
-    background-color: #1abc9c;
-    color: white;
+    background-color: var(--middle-blue-green);
+    color: var(--independence)
 }
 .aboutModalTitle{
     vertical-align: middle;
+}
+.modal-content{
+    background-color: var(--white);
 }
 .close{
     border: none;
     background-color: rgba(0, 0, 0, 0);
     color: rgba(0, 0, 0, 0.5);
     font-size:25px;
-    height: 40px;
-    width: 40px;
+    /* height: 40px;
+    width: 40px; */
 
     transition: 500ms;
 }
@@ -34,28 +46,27 @@ html > *{
 }
 
 .fa-github-square{
-    vertical-align: middle;
     color: black;
     transition: 500ms;
 }
 .fa-github-square:hover{
-    color: #1abc9c;
+    color: var(--brink-pink);
 }
 .githubIcon{
-    font-size: 25px;
+    font-size: var(--icon-size);
 }
 .githubPfp{
     border-radius: 50%;
 }
-
 .fa-discord{
-    vertical-align:sub;
     color: black;
     transition: 500ms;
+    /* padding-left: 100px; */
+
 }
 .fa-discord:hover{
-    color: #1abc9c;
+    color: var(--brink-pink);
 }
 .discordIcon{
-    font-size: 25px;
+    font-size: var(--icon-size);
 }
