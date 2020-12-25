@@ -14,12 +14,17 @@ html > *{
 }
 body{
     background-color: var(--white);
+      height: 100%;
+}
+.fullscreen{
+  height: 100%;
 }
 .navbar{
     background-color: var(--independence);
 }
 .placeholder{
     font-size: xx-large;
+    vertical-align: middle;
 }
 .abt-btn{
     background-color: var(--middle-blue-green);
@@ -62,7 +67,6 @@ body{
     color: black;
     transition: 500ms;
     /* padding-left: 100px; */
-
 }
 .fa-discord:hover{
     color: var(--brink-pink);
