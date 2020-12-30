@@ -15,15 +15,24 @@ body{
     background-color: var(--white);
       height: 100%;
 }
+.wordContainer{
+
+}
+.red{
+    background-color: red;
+}
 .fullscreen{
   height: 100%;
 }
 .navbar{
     background-color: var(--independence);
 }
-.placeholder{
+.word{
     font-size: xx-large;
     vertical-align: middle;
+}
+.capitalise{
+    text-transform: capitalize;
 }
 .abt-btn{
     background-color: var(--middle-blue-green);
