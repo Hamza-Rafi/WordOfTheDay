@@ -27,6 +27,20 @@ var setWord = function(){
 }
 // Checks if the days are the same
 var isSameDay = function(){
+    var lastDate = JSON.parse(localStorage.getItem('date'))
+
+    // Check if date is  in localStorage and if not sets it
+    if (lastDate == null){
+        setDate()
+    }
+
+    var currentDate = new Date().toLocaleDateString("en-GB").split('/')
+    var currentDateObj = {
+        day : currentDate[0],
+        month : currentDate[1],
+        year : currentDate[2]
+    }
+
     if(lastDate.day == currentDateObj.day && lastDate.month == currentDateObj.month && lastDate.year == currentDateObj.year){
         return true
     }else{
@@ -37,20 +51,6 @@ var isSameDay = function(){
 //
 // var wordData = getRandomWord(randomUrl)
 //
-
-var lastDate = JSON.parse(localStorage.getItem('date'))
-
-// Check if date is  in localStorage and if not sets it
-if (lastDate == null){
-    setDate()
-}
-
-var currentDate = new Date().toLocaleDateString("en-GB").split('/')
-var currentDateObj = {
-    day : currentDate[0],
-    month : currentDate[1],
-    year : currentDate[2]
-}
 
 if(isSameDay()){
     // is its the same day then get word data from local storage
