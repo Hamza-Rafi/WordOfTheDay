@@ -14,7 +14,7 @@ var getWord = function() {
         console.log("API req made")
             // listLocalStorage()
     })
-}
+} 
 var setDate = function() {
         let [date, month, year] = new Date().toLocaleDateString("en-GB").split('/')
 
