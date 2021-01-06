@@ -1,84 +1,99 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic');
-:root{
+:root {
     --white: #fcfcfcff;
     --brink-pink: #f7567cff;
     --cornsilk: #fffae3ff;
     --middle-blue-green: #99e1d9ff;
     --independence: #5d576bff;
-
     --icon-size: 65px;
 }
-html > *{
+
+html>* {
     font-family: "IBM Plex Sans";
 }
-body{
-    background-color: var(--white);
-      height: 100%;
-}
-.wordContainer{
 
+body {
+    background-color: var(--white);
+    height: 100%;
 }
-.red{
+
+.wordContainer {}
+
+.red {
     background-color: red;
 }
-.fullscreen{
-  height: 100%;
+
+.fullscreen {
+    height: 100%;
 }
-.navbar{
+
+.navbar {
     background-color: var(--independence);
 }
-.word{
+
+.word {
     font-size: xx-large;
     vertical-align: middle;
 }
-.capitalise{
+
+.capitalise {
     text-transform: capitalize;
 }
-.abt-btn{
+
+.abt-btn {
     background-color: var(--middle-blue-green);
     color: var(--independence)
 }
-.aboutModalTitle{
+
+.aboutModalTitle {
     vertical-align: middle;
 }
-.modal-content{
+
+.modal-content {
     background-color: var(--white);
 }
-.close{
+
+.close {
     border: none;
     background-color: rgba(0, 0, 0, 0);
     color: rgba(0, 0, 0, 0.5);
-    font-size:25px;
+    font-size: 25px;
     /* height: 40px;
     width: 40px; */
-
     transition: 500ms;
 }
-.close:hover{
+
+.close:hover {
     color: rgba(0, 0, 0, 1);
 }
 
-.fa-github-square{
+.fa-github-square {
     color: black;
     transition: 500ms;
 }
-.fa-github-square:hover{
+
+.fa-github-square:hover {
     color: var(--brink-pink);
 }
-.githubIcon{
+
+.githubIcon {
     font-size: var(--icon-size);
 }
-.githubPfp{
+
+.githubPfp {
     border-radius: 50%;
 }
-.fa-discord{
+
+.fa-discord {
     color: black;
     transition: 500ms;
     /* padding-left: 100px; */
 }
-.fa-discord:hover{
+
+.fa-discord:hover {
     color: var(--brink-pink);
 }
-.discordIcon{
+
+.discordIcon {
     font-size: var(--icon-size);
 }

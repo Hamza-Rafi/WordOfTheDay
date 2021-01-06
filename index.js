@@ -2,61 +2,61 @@
 //     localStorage.clear()
 // }else{}
 
-var getWord = function(){
-    let url = "http://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=6wo4tpoh046qy4ktxok0xxt74i1ka00iwpr7uws0is0xaj0bp"
+var getWord = function() {
+    let url = "https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=6wo4tpoh046qy4ktxok0xxt74i1ka00iwpr7uws0is0xaj0bp"
 
     fetch(url).then(response => response.json()).then(data => {
         let wordData = {
-            word : data.word,
-            definition : data.definitions[0].text
+            word: data.word,
+            definition: data.definitions[0].text
         }
         localStorage.setItem('wordData', JSON.stringify(wordData))
         console.log("API req made")
-        // listLocalStorage()
+            // listLocalStorage()
     })
 }
-var setDate = function(){
-    let [date, month, year] = new Date().toLocaleDateString("en-GB").split('/')
+var setDate = function() {
+        let [date, month, year] = new Date().toLocaleDateString("en-GB").split('/')
 
-    let dateNow = {
-        date : date,
-        month : month,
-        year : year
+        let dateNow = {
+                date: date,
+                month: month,
+                year: year
+            }
+            // dateNow.day = day
+            // dateNow.month = month
+            // dateNow.year = year
+
+        localStorage.setItem('date', JSON.stringify(dateNow))
+            // listLocalStorage()
     }
-    // dateNow.day = day
-    // dateNow.month = month
-    // dateNow.year = year
-
-    localStorage.setItem('date', JSON.stringify(dateNow))
-    // listLocalStorage()
-}
-// Checks if the days are the same
-var isSameDay = function(){
+    // Checks if the days are the same
+var isSameDay = function() {
     var lastDate = JSON.parse(localStorage.getItem('date'))
 
     // Check if date is  in localStorage and if not sets it
-    if (lastDate == null){
+    if (lastDate == null) {
         setDate()
         lastDate = JSON.parse(localStorage.getItem('date'))
     }
 
     var currentDate = new Date().toLocaleDateString("en-GB").split('/')
     var currentDateObj = {
-        date : currentDate[0],
-        month : currentDate[1],
-        year : currentDate[2]
+        date: currentDate[0],
+        month: currentDate[1],
+        year: currentDate[2]
     }
 
-    if(lastDate.date == currentDateObj.date && lastDate.month == currentDateObj.month && lastDate.year == currentDateObj.year){
+    if (lastDate.date == currentDateObj.date && lastDate.month == currentDateObj.month && lastDate.year == currentDateObj.year) {
         return true
-    }else{
+    } else {
         return false
     }
 }
 
 var lastDate = JSON.parse(localStorage.getItem('date'))
 
-if(lastDate == null){
+if (lastDate == null) {
     setDate()
     getWord()
     lastDate = JSON.parse(localStorage.getItem('date'))
@@ -64,9 +64,9 @@ if(lastDate == null){
 }
 
 var sameDay = isSameDay()
-// sameDay = false
+    // sameDay = false
 
-if(sameDay == false){
+if (sameDay == false) {
     console.log("sameday is false")
     setDate()
     getWord()
@@ -86,11 +86,11 @@ setTimeout(() => {
 
 
 // Date and time for display
-var updateTime = function(){
+var updateTime = function() {
     var timeContainer = document.getElementById('timeContainer')
     var displayDate = new Date().toLocaleString("en-GB")
 
-    while(timeContainer.firstChild){
+    while (timeContainer.firstChild) {
         timeContainer.firstChild.remove()
     }
 
@@ -98,6 +98,7 @@ var updateTime = function(){
     timeContainer.appendChild(timeContent)
 }
 setInterval(updateTime, 500)
+
 
 
 
