@@ -2,6 +2,7 @@
 //     localStorage.clear()
 // }else{}
 
+// I need help ;-;
 var getWord = function() {
     let url = "https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=6wo4tpoh046qy4ktxok0xxt74i1ka00iwpr7uws0is0xaj0bp"
 
