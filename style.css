@@ -13,8 +13,9 @@ html>* {
 }
 
 body {
-    background-color: var(--white);
+    /* background-color: var(--white); */
     /* background-color: yellow; */
+    background-color: red;
     height: 100%;
 }
 
