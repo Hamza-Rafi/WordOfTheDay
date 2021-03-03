@@ -13,6 +13,11 @@ var getWord = function() {
         }
         localStorage.setItem('wordData', JSON.stringify(wordData))
         console.log("API req made")
+
+
+        displayWord()
+        //set word
+
             // listLocalStorage()
     })
 } 
@@ -54,25 +59,7 @@ var isSameDay = function() {
         return false
     }
 }
-
-var lastDate = JSON.parse(localStorage.getItem('date'))
-
-if (lastDate == null) {
-    setDate()
-    getWord()
-    lastDate = JSON.parse(localStorage.getItem('date'))
-    console.log('Lastdate is null')
-}
-
-var sameDay = isSameDay()
-    // sameDay = false
-
-if (sameDay == false) {
-    console.log("sameday is false")
-    setDate()
-    getWord()
-}
-setTimeout(() => {
+var displayWord = function(){
     var word = JSON.parse(localStorage.getItem("wordData"))
 
     var wordHolder = document.getElementById('word');
@@ -82,23 +69,33 @@ setTimeout(() => {
     var definitionHolder = document.getElementById('definition')
     var definitionContent = document.createTextNode(word.definition)
     definitionHolder.appendChild(definitionContent)
+    console.log('Word displayed')
+}
 
-}, 250)
+var lastDate = JSON.parse(localStorage.getItem('date'))
 
-
-// Date and time for display
-var updateTime = function() {
-    var timeContainer = document.getElementById('timeContainer')
-    var displayDate = new Date().toLocaleString("en-GB")
-
-    while (timeContainer.firstChild) {
-        timeContainer.firstChild.remove()
+if (lastDate == null) {
+    setDate()
+    getWord()
+    lastDate = JSON.parse(localStorage.getItem('date'))
+    console.log('Lastdate is null')
+}else{
+    var sameDay = isSameDay()
+        // sameDay = false
+    
+    if (sameDay == false) {
+        console.log("sameday is false")
+        setDate()
+        getWord()
+    }else if(sameDay == true){
+        displayWord()
     }
 
-    var timeContent = document.createTextNode(displayDate)
-    timeContainer.appendChild(timeContent)
 }
-setInterval(updateTime, 500)
+
+
+// displayWord()
+
 
 
 
