@@ -8,7 +8,6 @@
 
 html>* {
     font-family: "Roboto Mono";
-    /* white-space: pre; */
 }
 /* ::selection{
     user-select: none;
@@ -53,23 +52,11 @@ body {
     text-transform: capitalize;
 }
 
-/* .definition::before{
-    content: "//";
-} */
-/* .definition::after{
-    content: "//";
-} */
 
 .abt-btn {
-    /* background-color: red; */
     border-radius: 0px;
 }
-/* .abt-btn::before{
-    content: "//";
-}
-.abt-btn::after{
-    content: "//";
-} */
+
 .abt-btn:focus{
     outline: none;
     box-shadow: none;
@@ -91,8 +78,6 @@ body {
     background-color: rgba(0, 0, 0, 0);
     color: rgba(0, 0, 0, 0.5);
     font-size: 25px;
-    /* height: 40px;
-    width: 40px; */
     transition: 500ms;
 }
 
@@ -120,7 +105,6 @@ body {
 .fa-discord {
     color: black;
     transition: 500ms;
-    /* padding-left: 100px; */
 }
 
 .fa-discord:hover {
