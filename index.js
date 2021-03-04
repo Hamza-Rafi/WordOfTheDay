@@ -66,8 +66,24 @@ var displayWord = function(){
     var wordContent = document.createTextNode(word.word)
     wordHolder.appendChild(wordContent)
 
+    // definition = word.definition
+    // spacedDef = ""
+    // for(i = 0; i < definition.length; i++){
+    //     console.log(definition[i])
+    //     spacedDef += definition[i]
+    //     spacedDef += " "
+    //     // if(definition[i] == " "){
+    //     //     spacedDef += " "
+
+    //     // }
+    // }
+    // console.log(spacedDef)
+
+
     var definitionHolder = document.getElementById('definition')
     var definitionContent = document.createTextNode(word.definition)
+    // var definitionContent = document.createTextNode(spacedDef)
+
     definitionHolder.appendChild(definitionContent)
     console.log('Word displayed')
 }

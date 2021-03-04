@@ -1,58 +1,92 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 :root {
-    --white: #fcfcfcff;
-    --brink-pink: #f7567cff;
-    --cornsilk: #fffae3ff;
-    --middle-blue-green: #99e1d9ff;
-    --independence: #5d576bff;
+    --backgroundColour: #FFF;
+
     --icon-size: 65px;
 }
 
 html>* {
-    font-family: "IBM Plex Sans";
+    font-family: "Roboto Mono";
+    /* white-space: pre; */
 }
+/* ::selection{
+    user-select: none;
+} */
 
 body {
-    background-color: var(--white);
-    /* background-color: yellow; */
-    /* background-color: red; */
-    height: 100%;
+    background-color: var(--backgroundColour);
+    /* overflow-x: hidden; */
 }
-
-/* .wordContainer {} */
-
 .red {
     background-color: red;
 }
-
-.fullscreen {
-    height: 100%;
+.blue{
+    background-color: blue;
 }
 
-.navbar {
-    background-color: var(--independence);
+.screen{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wordContainer{
+/* Yeet */
 }
 
 .word {
     font-size: xx-large;
     vertical-align: middle;
 }
+.word::before{
+    content: "//";
+}
+.word::after{
+    content: "//";
+}
+.definition{
+    white-space: pre;
+    
+}
 
 .capitalise {
     text-transform: capitalize;
 }
 
+/* .definition::before{
+    content: "//";
+} */
+/* .definition::after{
+    content: "//";
+} */
+
 .abt-btn {
-    background-color: var(--middle-blue-green);
-    color: var(--independence)
+    /* background-color: red; */
+    border-radius: 0px;
 }
+/* .abt-btn::before{
+    content: "//";
+}
+.abt-btn::after{
+    content: "//";
+} */
+.abt-btn:focus{
+    outline: none;
+    box-shadow: none;
+}
+
 
 .aboutModalTitle {
     vertical-align: middle;
 }
 
 .modal-content {
-    background-color: var(--white);
+    background-color: white;
+    border-radius: 0px;
+
 }
 
 .close {
