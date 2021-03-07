@@ -2,17 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 :root {
     --backgroundColour: #FFF;
-
     --icon-size: 65px;
 }
-
 html>* {
     font-family: "Roboto Mono";
 }
 /* ::selection{
     user-select: none;
 } */
-
 body {
     background-color: var(--backgroundColour);
     /* overflow-x: hidden; */
@@ -23,7 +20,6 @@ body {
 .blue{
     background-color: blue;
 }
-
 .screen{
     height: 100vh;
     width: 100vw;
@@ -32,7 +28,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 .word {
     font-size: xx-large;
     vertical-align: middle;
@@ -45,34 +40,31 @@ body {
 }
 .definition{
     white-space: pre;
-    
 }
-
 .capitalise {
     text-transform: capitalize;
 }
-
-
+.secrets-btn{
+    border-radius: 0px;
+}
+.secrets-btn:focus{
+    outline: none;
+    box-shadow: none;
+}
 .abt-btn {
     border-radius: 0px;
 }
-
 .abt-btn:focus{
     outline: none;
     box-shadow: none;
 }
-
-
 .aboutModalTitle {
     vertical-align: middle;
 }
-
 .modal-content {
     background-color: white;
     border-radius: 0px;
-
 }
-
 .close {
     border: none;
     background-color: rgba(0, 0, 0, 0);
@@ -80,37 +72,29 @@ body {
     font-size: 25px;
     transition: 500ms;
 }
-
 .close:hover {
     color: rgba(0, 0, 0, 1);
 }
-
 .fa-github-square {
     color: black;
     transition: 500ms;
 }
-
 .fa-github-square:hover {
     color: var(--brink-pink);
 }
-
 .githubIcon {
     font-size: var(--icon-size);
 }
-
 .githubPfp {
     border-radius: 50%;
 }
-
 .fa-discord {
     color: black;
     transition: 500ms;
 }
-
 .fa-discord:hover {
     color: var(--brink-pink);
 }
-
 .discordIcon {
     font-size: var(--icon-size);
 }
